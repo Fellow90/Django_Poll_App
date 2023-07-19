@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>POLL APP</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'polls:index' %}">Home</a>
+    </nav>
+    <main>
+        <div class="container">
+        {% block content %}
+
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Create</a></li>
+        </ul>
+        
+        {% endblock %}
+        </div>
+    </main>
+    
+</body>
+</html>

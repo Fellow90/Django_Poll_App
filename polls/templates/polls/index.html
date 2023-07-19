@@ -1,0 +1,18 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+
+{% if question_for_template %}
+<ul>
+    {% for question in question_for_template %}
+    <li>
+        <a href = "/polls/{{question.id}}/">{{question.question_text}}</a>
+        <!-- <a href = "{% url 'polls:detail' question.id %}">{{question.question_text}}</a> -->
+    </li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No polls are available!!</p>
+{% endif %}
+{% endblock %}
